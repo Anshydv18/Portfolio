@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color: #257167;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight:600;
+    animation: slideright 1s ease-out;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    margin-left:35px;
+    transition: 0.3s;
+    animation: slidetop .5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+.main{
+    padding: 150px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.desc{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.photo{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slidebottom 1s ease backwards;
+}
+
+.photo .profile{
+    animation: bounce 1s infinite;
+}
+.profile{
+    border-radius: 100%;
+    box-shadow: 5px 5px 20px rgb(40, 191, 140);
+    width: 400px;
+    
+}
+.desc h3{
+    font-size: 32px;
+    font-weight: 700;
+}
+.desc h1{
+    font-size: 56px;
+    font-weight: 700;
+}
+.desc h3,.desc h1{
+    animation: slideright 1s ease-out;
+}
+.links a i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background: transparent;
+    color: aqua;
+    border: 2px solid aqua;
+    padding: 10px;
+    border-radius: 100%;
+    margin: 30px 15px 10px 0;
+    animation: slideright 1s ease-out;
+    animation-delay: calc(0.2s * var(--i));
+    
+}
+.links a i:hover{
+    background-color: #2dc2b3;
+    color: #3c5261;
+    box-shadow: 2px 2px 5px #2dc2b3;
+}
+.btn-txt{
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+    border: 2px solid #2dc2b3;
+    border-radius:10px;
+    padding: 10px;
+    color: #11222d;
+    background-color: #5ff1ec;
+    animation: slideright 0.3s ease-out;
+    animation-delay: 0.3s;
+}
+.btn-txt:hover{
+    scale: 0.9;
+    box-shadow: 3px 3px 4px #415452, -3px -3px 5px #364645
+          
+}
+#running{
+    margin-bottom: 20px;
+}
+.text{
+    font-size: 40px;
+    color: aqua;
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(-10%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(10%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  @keyframes slideright {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes slidetop {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  @keyframes slidebottom {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+
+.about{
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slidetop 1s ease-out forwards;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding-right: 20px;
+    margin-right: 15px;
+    width:40%;
+    gap: 2rem;
+}
+#more{
+    width: 160px;
+    animation: slidetop 1s ease forwards;
+}
+.subtitle{
+    font-size: 45px;
+    animation: slideright 1s ease forwards;
+}
+.subtitle span{
+    color: #5ff1ec;
+}
+.right p{
+    font-size: large;
+    animation: slideright 1s ease backwards;
+}
+.right h3{
+    font-size: 30px;
+    animation: slideright 1s ease forwards
+}
+#beech{
+    text-align: center;
+}
